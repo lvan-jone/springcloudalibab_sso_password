@@ -1,0 +1,19 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: resource
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: public
+
+# JWT 签名密钥（必须与认证服务器一致）
+jwt:
+  secret: sso-secret-key-2024
+
+logging:
+  level:
+    org.springframework.security: DEBUG
